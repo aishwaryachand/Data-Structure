@@ -1,2 +1,2 @@
 # Data-Structure
-This repository consists of scrpits on Data Structure with C++
+This repository consists of scripts on Data Structure with C++
