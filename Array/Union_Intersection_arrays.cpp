@@ -1,4 +1,4 @@
-
+/* find union and intersection of array */
 #include <bits/stdc++.h>
 using namespace std;
 
