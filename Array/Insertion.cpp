@@ -4,8 +4,6 @@ using namespace std;
 int* insertX(int n ,int arr[] , int x , int pos){
 
 int i ;
-
-//increase the size
 n++;
 
 for(i=n ; i >= pos ;i--){
@@ -16,7 +14,6 @@ arr[pos-1]=x ;
 
 return arr ;
 }
-
 
 int main(){
 
