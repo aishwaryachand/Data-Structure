@@ -1,8 +1,7 @@
+/*Function to reverse an array */
 #include <bits/stdc++.h>
 #include <iostream>
 using namespace std;
-
-/*Function to reverse an array */
 
 void reverseArray( int arr[] , int start , int end)
 {
