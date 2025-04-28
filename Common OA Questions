@@ -1,0 +1,94 @@
+Common Amazon Online Assessment Questions (New Grad / SDE-1)
+
+Amazon’s Online Assessment (OA) for new graduates and SDE-1 roles typically includes 1-2 coding questions. Over the years, certain coding problems have frequently appeared in these assessments. Below is a categorized list of actual past OA questions (memory-based), grouped by the core Data Structure or Algorithm topic. Each question is briefly described, and all are known to be commonly asked, especially in recent years, as reported by candidates on LeetCode, GeeksforGeeks, and other forums.
+Arrays & Two-Pointer Problems
+Two Sum – Unique Pairs: Given an array of integers and a target value, find the number of unique pairs of numbers in the array that sum up to the target (variation of the classic Two Sum problem)​
+1o24bbs.com
+. This problem tests use of two-pointer or hashing techniques to avoid counting duplicate pairs.
+Optimal Utilization (Prime Air Route / Movies on Flight): Given two lists of pairs (e.g. (id, value) for two datasets) and a target number, find all pairs of IDs (one from each list) whose values sum up to the largest possible total not exceeding the target​
+teamblind.com
+. This is a two-pointer problem (after sorting both lists) often framed as finding optimal resource utilization (also known as the "Prime Air route" problem in Amazon OAs).
+Amazon Music Pairs (Songs Duration): Given a list of song durations, count how many pairs of songs have total durations divisible by 60​
+teamblind.com
+. This array problem uses modulo arithmetic and two-sum logic (popularly known from the LeetCode “Pairs of Songs With Total Durations Divisible by 60” problem, often reported in Amazon assessments).
+Disk Space Analysis (Max of Minima): You are given an array of integers representing free disk space on n servers and an integer m. Consider every contiguous segment of length m; for each segment determine the minimum value, and among all these segment minima, return the maximum​
+github.com
+. This sliding-window problem tests array traversal and deque/heap usage to efficiently find the “maximum of minimums” for segments of a given size.
+Strings & Hashing
+Substrings of Size K with K Distinct Characters: Given a string and an integer K, find all substrings of length K that contain exactly K distinct characters​
+1o24bbs.com
+. This problem is solved with a sliding window and a frequency map, and has been a frequent Amazon OA question in recent years.
+Top K Frequently Mentioned Keywords: You are given a list of keywords and a list of review sentences. Find the top K most frequent keywords mentioned across the reviews, ignoring any keywords not in the list (and typically ignoring letter case and punctuation)​
+github.com
+. This is essentially a string parsing and hashing problem (counting word frequencies) combined with a heap or sort to get the top K. It has been reported in Amazon OAs as a memory-based question focusing on parsing and counting logic.
+Most Common Word (Excluding Banned): Given a paragraph and a set of “banned” words, find the most frequent word that is not in the banned list​
+github.com
+. This question tests string processing (splitting, cleaning punctuation) and use of a hash map to count frequencies. (A simpler variant of the above keyword frequency problem, it’s known from LeetCode and has appeared in Amazon assessments).
+Unique Device Names: In a system that auto-generates unique names, you must process a list of device name requests. If a name is new, accept it; if it’s already taken, append an integer suffix (k) to make it unique (and if that’s also taken, increment the suffix until unique). Output the assigned names for all requests​
+tiffanyiong.com
+. This problem involves using a hash map to track used names and the next available suffix number for duplicates. It’s commonly encountered in Amazon OAs (especially for intern/new grad level).
+Items in Containers (Shelf Divider problem): You are given a string consisting of items * and compartment dividers |. For multiple query ranges, determine how many items are enclosed between dividers within those ranges​
+teamblind.com
+. This problem (also known as “Items in Containers”) uses prefix sums or precomputed counts to efficiently answer queries about items between | delimiters. It tests string traversal and interval-sum logic.
+(Other string problems occasionally reported include “Break a Palindrome” – where you lexicographically minimize a palindrome by changing a single character​
+github.com
+ – and “Divisibility of Strings” – checking if one string can be concatenated to form another. These are less common but have appeared in some Amazon question pools.)
+Greedy & Sorting
+Five-Star Sellers (Rating Improvement): Given a list of products/sellers with their 5-star review counts and total review counts, and a target average rating, determine the minimum number of additional 5-star reviews needed to reach the target rating​
+aonecode.com
+. This problem is solved greedily by always adding a five-star review to the product with the current lowest 5-star ratio, using a max-heap. It’s frequently mentioned as an Amazon OA question testing greedy choice strategy (maximize incremental gain in average rating per review) and heap usage.
+Fill The Truck (Maximum Units on a Truck): You have n types of boxes, each type with a count of boxes and units per box. Given a truck capacity (number of boxes it can carry), determine the maximum total units the truck can carry by selecting some boxes​
+teamblind.com
+. The greedy solution sorts box types by units per box and fills the truck with the highest-unit boxes first. This problem (a variant of the “Maximum Units on a Truck” question) is a common OA task focusing on sorting and greedy allocation.
+Cutoff Ranks (Competition Ranking): Given scores of participants in a competition and an integer cutOffRank, determine how many participants will advance to the next round, where advancing requires a rank ≤ cutOffRank (ranking is based on score, and in case of ties in score, all tied participants qualify)​
+github.com
+. The task involves sorting scores and counting how many fall above the cutoff (accounting for ties). It’s an Amazon favorite that tests sorting and careful handling of ranking logic.
+Choose a Flask: There are m flasks, each with certain capacities (measurement markings). You have n requirements (volumes of liquid needed). You need to choose one flask such that you can fulfill all requirements with one marking (capacity) in that flask, minimizing wasted space. Essentially, for each flask, find the smallest capacity that is >= each requirement and calculate total waste; choose the flask with minimum total waste​
+teamblind.com
+. This is a greedy/implementation problem that involves sorting the capacities and iterating through requirements. It has appeared as an OA question requiring careful consideration of edge cases and efficiency.
+Throttling Gateway (Request Rate Limiter): You are given a stream of API request timestamps and need to count how many requests would be dropped by a rate-limiting gateway with certain rules (e.g. no more than 3 requests per second, 20 requests per minute, etc.)​
+teamblind.com
+. Solving this involves simulating the process in a greedy manner (or using sliding windows) to enforce the limits. It tests ability to implement specified constraints and iterate through data efficiently – a common scenario-based question in Amazon OAs.
+Slowest Key Press: Given a list of key press durations (or given release times and the keys pressed), determine which key was pressed the longest. If multiple keys share the longest duration, output the lexicographically largest key​
+teamblind.com
+. This is a straightforward problem involving computing time differences and then a comparison; it has been reported in OAs (often paired with another question) as an easy warm-up, verifying basic iteration and comparison logic.
+Graphs & BFS/DFS
+Number of Islands: Given a 2D grid map of 1s (land) and 0s (water), count the number of distinct islands (connected groups of land)​
+teamblind.com
+. This classic BFS/DFS problem is frequently included to test graph traversal skills on a grid. It remains a common question in Amazon’s question bank for new grads.
+Nearest City: You are given a list of cities with their (x, y) coordinates and city names. For a given query city, find the nearest city that shares either the same x or the same y coordinate (compute distance by Manhattan distance). If there are multiple, return the lexicographically smallest name; if none, return NONE​
+teamblind.com
+. Solving this efficiently involves using hash maps to group cities by x and by y coordinates. This problem has been a staple in Amazon OAs, appearing often as a scenario to test searching and dictionary usage.
+Shopping Patterns: Given a purchase history graph where nodes represent products and an edge between two products means they were purchased together by some customer, find all “triangles” (triads of products all connected to each other) and return the minimum sum of degrees of the three nodes in such a triangle (excluding the triangle’s internal connections)​
+github.com
+. In simpler terms, find a trio of products that all share a common buyer and have the least total other connections. This graph problem (from an Amazon hackathon/OA known as “Shopping Patterns”) tests the ability to find cliques (triangles) in a graph and aggregate node connection counts. It’s more complex and has been asked to assess graph traversal and brute-force optimization.
+Minimum Cost to Connect All Nodes: Given n nodes and a list of edges with costs (some nodes might be isolated), find the minimum cost to connect all nodes (making it a single connected network)​
+teamblind.com
+. You can treat unconnected nodes as needing a new edge of given fixed cost. This is essentially a Minimum Spanning Tree problem (use Kruskal’s or Prim’s algorithm). Amazon has used this to test understanding of MST/Union-Find in an OA setting (sometimes framed as connecting cities with roads at minimum cost).
+Subtree with Maximum Average: Given a tree (often an N-ary tree) where each node has an integer value, find the subtree (node plus all its descendants) that has the maximum average value​
+github.com
+. The solution requires traversing the tree (DFS) and calculating sum and node count for each subtree, then comparing averages. This problem tests recursion and tree traversal; it has been reported in Amazon OAs (especially for new grad positions) to assess ability to work with tree data structures and aggregate data.
+(Other graph problems reported include “Friend Circles (Connected Groups)” – essentially counting connected components in an undirected graph of people​
+teamblind.com
+ – and “Critical Routers” (or critical servers) which asks for articulation points in a network. These are less common for new grads, with the latter being more advanced.)
+Data Structures & Simulation (Miscellaneous)
+Turnstile (Queue Simulation): There is a turnstile that can be used by people either exiting or entering a store. You are given two arrays – time (when each person arrives at the turnstile) and direction (0 for enter, 1 for exit for each person). At each time unit, at most one person can pass through, and there are rules dictating priority (e.g. if the turnstile was used in the previous second for exit, then at the same time, exiting people get priority)​
+geeksforgeeks.org
+. You must output the times at which each person passes through. This simulation uses queues to manage waiting people and implements the given priority rules. It’s a well-known Amazon OA question that tests careful handling of time-step simulation and queue data structures.
+LRU Cache Misses: You are given a sequence of cache access requests (by key) and a cache size. The cache follows Least Recently Used (LRU) eviction policy. Count the number of cache misses (i.e. the number of times an item was not found in the cache, causing a load) as the sequence is processed​
+aonecode.com
+. To solve, you simulate the LRU cache using an OrderedDict or LinkedHashSet/Queue to track recency. This problem evaluates understanding of caching mechanisms and data structures; it has been reported in Amazon OAs (especially in the context of system design scenarios).
+Transaction Logs (Active Users): You’re given a list of transaction log entries, each indicating a user ID initiating a transaction and a user ID on the receiving end (e.g. “U1 U2” meaning user1 sent something to user2). A user is “active” if they appear at least k times in the logs (either as sender or receiver). The task is to return the list of active user IDs​
+github.com
+. This requires parsing strings and counting frequencies with a hash map. It’s commonly asked to test string parsing, use of dictionaries, and sorting of results (the output is usually sorted by user ID).
+Utilization Checks (Autoscaling Policy): A system monitors CPU utilization in an array. The rule is: if the average utilization over a period is above a threshold, double the number of servers (and reset index skipping cooldown), if it’s below a lower threshold and more than 1 server, halve the servers​
+tiffanyiong.com
+. The problem gives a utilization array and asks for the final number of servers after applying the autoscaling rules. It’s an implementation simulation problem that has shown up in Amazon OAs (also known as the “Autoscale Policy” question), testing basic iteration, conditional logic, and simulation of a simple algorithm.
+Multiprocessor System: You have a number of processors and tasks arriving with certain loads. If a processor’s load exceeds a threshold, it’s reset after some time. The problem might ask for the time when all tasks are completed or how many tasks get dropped, etc., based on a specific rule set​
+github.com
+. This is another simulation-based question requiring use of appropriate data structures (often a min-heap to pick the least loaded processor, etc.). Variants of this problem have appeared in Amazon OAs to assess handling of priority queues and time-based simulation.
+Each of the above questions has been repeatedly mentioned in forums like LeetCode Discuss and GeeksforGeeks as being part of Amazon’s OA in recent years. By practicing these problems, categorized by topic, candidates can cover the most frequent OA questions and ensure they are well-prepared for the patterns that Amazon likes to test. Familiarity with these problem types and efficient solutions (using the appropriate data structure or algorithm for each category) will greatly help in performing well on the Amazon Online Assessment​
+1o24bbs.com
+​
+geeksforgeeks.org
+.
